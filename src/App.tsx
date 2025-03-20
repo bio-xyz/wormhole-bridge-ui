@@ -1,3 +1,4 @@
+import "@walletconnect/modal";
 import WormholeConnect, {
   WormholeConnectConfig,
   WormholeConnectTheme,
