@@ -14,7 +14,8 @@ const wormholeConfig: WormholeConnectConfig = {
       fromChain: "Solana",
       toChain: "BaseSepolia",
     },
-    walletConnectProjectId: "6c25fd4a06db11907122a8483f32fcce",
+    walletConnectProjectId: import.meta.env
+      .VITE_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
   // TODO: use a private RPC for mainnet
   // rpcs: {
