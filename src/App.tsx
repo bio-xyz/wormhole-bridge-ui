@@ -5,14 +5,9 @@ import WormholeConnect, {
 } from "@wormhole-foundation/wormhole-connect";
 
 const wormholeConfig: WormholeConnectConfig = {
+  network: "Testnet",
+  chains: ["Solana", "BaseSepolia"],
   tokens: ["WSV"],
-  rpcs: {
-    Ethereum: import.meta.env.VITE_PUBLIC_ETHEREUM_RPC_URL,
-    Solana: import.meta.env.VITE_PUBLIC_SOLANA_RPC_URL,
-    Base: import.meta.env.VITE_PUBLIC_BASE_RPC_URL,
-  },
-  network: "Mainnet",
-  chains: ["Ethereum", "Solana"],
   ui: {
     title: "Wormhole NTT UI",
     defaultInputs: {
