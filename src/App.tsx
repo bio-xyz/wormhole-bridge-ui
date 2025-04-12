@@ -15,8 +15,8 @@ const wormholeConfig: WormholeConnectConfig = {
   ui: {
     title: "",
     defaultInputs: {
-      fromChain: "Ethereum",
-      toChain: "Solana",
+      fromChain: "Solana",
+      toChain: "Ethereum",
     },
     walletConnectProjectId: import.meta.env
       .VITE_PUBLIC_WALLET_CONNECT_PROJECT_ID,
