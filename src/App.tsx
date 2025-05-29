@@ -19,7 +19,8 @@ const wormholeConfig: WormholeConnectConfig = {
       fromChain: "Ethereum",
       toChain: "Solana",
     },
-    walletConnectProjectId: "6c25fd4a06db11907122a8483f32fcce",
+    walletConnectProjectId: import.meta.env
+      .VITE_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
   routes: [
     ...nttRoutes({
