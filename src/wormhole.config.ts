@@ -1,22 +1,21 @@
-import {
-  nttRoutes,
-  type WormholeConnectConfig,
-} from "@wormhole-foundation/wormhole-connect";
+import { nttRoutes, type NttRoute } from "@wormhole-foundation/wormhole-connect/ntt";
+import type { config } from "@wormhole-foundation/wormhole-connect";
 
-export const wormholeConfig: WormholeConnectConfig = {
+export const wormholeConfig: config.WormholeConnectConfig = {
   rpcs: {
     Ethereum: process.env.NEXT_PUBLIC_ETHEREUM_RPC_URL,
     Solana: process.env.NEXT_PUBLIC_SOLANA_RPC_URL,
     Base: process.env.NEXT_PUBLIC_BASE_RPC_URL,
+    Bsc: process.env.NEXT_PUBLIC_BSC_RPC_URL,
   },
   network: "Mainnet",
-  chains: ["Ethereum", "Solana", "Base"],
+  chains: ["Ethereum", "Solana", "Base", "Bsc"],
   tokens: ["BIO", "GROW", "QBIO", "NEURON"],
   ui: {
     title: "",
     defaultInputs: {
-      fromChain: "Ethereum",
-      toChain: "Solana",
+      source: { chain: "Ethereum" },
+      destination: { chain: "Solana" },
     },
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
@@ -57,6 +56,17 @@ export const wormholeConfig: WormholeConnectConfig = {
               },
             ],
           },
+          {
+            chain: "Bsc",
+            manager: "0x6915fE8Dad5d32C2EE961e2F432d7DD5916316de",
+            token: "0x226A2FA2556C48245E57cd1cbA4C6c9e67077DD2",
+            transceiver: [
+              {
+                address: "0x86206f8813a1a4201420d67b75c27CCa0ff2A836",
+                type: "wormhole",
+              },
+            ],
+          }
         ],
         GROW_NTT: [
           {
@@ -156,6 +166,15 @@ export const wormholeConfig: WormholeConnectConfig = {
       symbol: "BIO",
       tokenId: {
         chain: "Base",
+        address: "0x226A2FA2556C48245E57cd1cbA4C6c9e67077DD2",
+      },
+      icon: "https://499247139-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F3ba2jNU6BPQUl4RXgHor%2Fuploads%2FnVRhDT0Cg1c1FtdQQOMd%2FToken%20Symbol%20BIO%20Round.svg?alt=media&token=58f7ce22-da87-4a8f-80eb-5a4df20659f6",
+      decimals: 18,
+    },
+    BIObsc: {
+      symbol: "BIO",
+      tokenId: {
+        chain: "Bsc",
         address: "0x226A2FA2556C48245E57cd1cbA4C6c9e67077DD2",
       },
       icon: "https://499247139-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F3ba2jNU6BPQUl4RXgHor%2Fuploads%2FnVRhDT0Cg1c1FtdQQOMd%2FToken%20Symbol%20BIO%20Round.svg?alt=media&token=58f7ce22-da87-4a8f-80eb-5a4df20659f6",
