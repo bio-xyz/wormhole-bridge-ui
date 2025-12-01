@@ -8,6 +8,9 @@ export const wormholeConfig: config.WormholeConnectConfig = {
     Base: process.env.NEXT_PUBLIC_BASE_RPC_URL,
     Bsc: process.env.NEXT_PUBLIC_BSC_RPC_URL,
   },
+  coingecko: {
+    apiKey: process.env.NEXT_PUBLIC_COINGECKO_API_KEY,
+  },
   network: "Mainnet",
   chains: ["Ethereum", "Solana", "Base", "Bsc"],
   tokens: ["BIO", "GROW", "QBIO", "NEURON"],
