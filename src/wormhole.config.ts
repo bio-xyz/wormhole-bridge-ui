@@ -13,7 +13,7 @@ export const wormholeConfig: config.WormholeConnectConfig = {
   },
   network: "Mainnet",
   chains: ["Ethereum", "Solana", "Base", "Bsc"],
-  tokens: ["BIO", "GROW", "QBIO", "NEURON"],
+  tokens: ["BIO", "GROW", "QBIO", "NEURON", "AUBRAI"],
   ui: {
     title: "",
     defaultInputs: {
@@ -143,6 +143,30 @@ export const wormholeConfig: config.WormholeConnectConfig = {
             ],
           },
         ],
+        AUBRAI_NTT: [
+          {
+            chain: "Base",
+            manager: "0x78f589003F494Fe0ef42EA8e7EC9e868d388Fe98",
+            token: "0x9d56c29e820Dd13b0580B185d0e0Dc301d27581d",
+            transceiver: [
+              {
+                address: "0xb6FCF6249C42F9591163ff6605BcB79b382a62e0",
+                type: "wormhole",
+              },
+            ],
+          },
+          {
+            chain: "Bsc",
+            manager: "0xD7fa17CF49b9Bd5fC2C6fa5Fb4993Bc5fa492Ab6",
+            token: "0x225E88fc248CE6608f56e7C56903Ce7Be7d22367",
+            transceiver: [
+              {
+                address: "0xf4994C10644caE91AB57738195910ef711A8deD4",
+                type: "wormhole",
+              },
+            ],
+          }
+        ],
       },
     }),
   ],
@@ -236,6 +260,24 @@ export const wormholeConfig: config.WormholeConnectConfig = {
       },
       icon: "https://bafybeic3v4mdmxk5tzsq7s5wcl4wryvwr74kqf6i63rblir2bylxbhtf2a.ipfs.w3s.link/neuron.png",
       decimals: 9,
+    },
+    AUBRAIbase: {
+      symbol: "AUBRAI",
+      tokenId: {
+        chain: "Base",
+        address: "0x9d56c29e820Dd13b0580B185d0e0Dc301d27581d",
+      },
+      icon: "https://docs.aubr.ai/~gitbook/image?url=https%3A%2F%2F1724008203-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FNCQ5aGXwXZkRrGHN7L6a%252Fsites%252Fsite_vLFiG%252Ficon%252FdMhAhI6BZ3kQapWUL8Y1%252Favatar-dex.png%3Falt%3Dmedia%26token%3D3eb2b51c-8f6f-4a1a-a1fa-2144900a9c6c&width=32&dpr=2&quality=100&sign=e49a1906&sv=2",
+      decimals:  18,
+    },
+    AUBRAIbsc: {
+      symbol: "AUBRAI",
+      tokenId: {
+        chain: "Bsc",
+        address: "0x225E88fc248CE6608f56e7C56903Ce7Be7d22367",
+      },
+      icon: "https://docs.aubr.ai/~gitbook/image?url=https%3A%2F%2F1724008203-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FNCQ5aGXwXZkRrGHN7L6a%252Fsites%252Fsite_vLFiG%252Ficon%252FdMhAhI6BZ3kQapWUL8Y1%252Favatar-dex.png%3Falt%3Dmedia%26token%3D3eb2b51c-8f6f-4a1a-a1fa-2144900a9c6c&width=32&dpr=2&quality=100&sign=e49a1906&sv=2",
+      decimals: 18,
     },
   },
 };
