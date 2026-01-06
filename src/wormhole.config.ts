@@ -13,7 +13,7 @@ export const wormholeConfig: config.WormholeConnectConfig = {
   },
   network: "Mainnet",
   chains: ["Ethereum", "Solana", "Base", "Bsc"],
-  tokens: ["BIO", "GROW", "QBIO", "NEURON", "AUBRAI"],
+  tokens: ["BIO", "GROW", "QBIO", "NEURON", "AUBRAI", "VITA"],
   ui: {
     title: "",
     defaultInputs: {
@@ -167,6 +167,52 @@ export const wormholeConfig: config.WormholeConnectConfig = {
             ],
           }
         ],
+        VITA_NTT: [
+          {
+            chain: "Solana",
+            manager: "NTtZX4WDRYLRYnms6NNgzotf7rC3pVxtgPZfk5AB4yP",
+            token: "vita3LfgKErA37DWA7W8RBks3c7Rym2hPFgizNRshBi",
+            transceiver: [
+              {
+                address: "94swQcamNWL7BVYZX27PFbonioGGhZhkoK5nPae6cSRU",
+                type: "wormhole",
+              },
+            ],
+          },
+          {
+            chain: "Ethereum",
+            manager: "0xB6C8c3050A3BFC9b58D7306d37cA0C2C8BFA865a",
+            token: "0x81f8f0bb1cB2A06649E51913A151F0E7Ef6FA321",
+            transceiver: [
+              {
+                address: "0x0D8DC2076D02f7DD7a4807BECA0336293112395f",
+                type: "wormhole",
+              },
+            ],
+          },
+          {
+            chain: "Base",
+            manager: "0x793646A3dF5538571b6BE55E988A2647c71F9322",
+            token: "0x490a4B510d0Ea9f835D2dF29Eb73b4FcA5071937",
+            transceiver: [
+              {
+                address: "0x30CF3995EA7264Fe1b1A0F76A13EC415D8eD378d",
+                type: "wormhole",
+              },
+            ],
+          },
+          {
+            chain: "Bsc",
+            manager: "0xB58D79C95f0129739dEa66b82B449A28EF6951f6",
+            token: "0x527942bEa3283D767F2449e57209fff3fE131395",
+            transceiver: [
+              {
+                address: "0xfF3568698d45b09ddb38BC22D52F8e748f469fa0",
+                type: "wormhole",
+              },
+            ],
+          },
+        ],
       },
     }),
   ],
@@ -277,6 +323,42 @@ export const wormholeConfig: config.WormholeConnectConfig = {
         address: "0x225E88fc248CE6608f56e7C56903Ce7Be7d22367",
       },
       icon: "https://docs.aubr.ai/~gitbook/image?url=https%3A%2F%2F1724008203-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FNCQ5aGXwXZkRrGHN7L6a%252Fsites%252Fsite_vLFiG%252Ficon%252FdMhAhI6BZ3kQapWUL8Y1%252Favatar-dex.png%3Falt%3Dmedia%26token%3D3eb2b51c-8f6f-4a1a-a1fa-2144900a9c6c&width=32&dpr=2&quality=100&sign=e49a1906&sv=2",
+      decimals: 18,
+    },
+    VITAsol: {
+      symbol: "VITA",
+      tokenId: {
+        chain: "Solana",
+        address: "vita3LfgKErA37DWA7W8RBks3c7Rym2hPFgizNRshBi",
+      },
+      icon: "https://etherscan.io/token/images/vitadao_32.png",
+      decimals: 9,
+    },
+    VITAeth: {
+      symbol: "VITA",
+      tokenId: {
+        chain: "Ethereum",
+        address: "0x81f8f0bb1cB2A06649E51913A151F0E7Ef6FA321",
+      },
+      icon: "https://etherscan.io/token/images/vitadao_32.png",
+      decimals: 18,
+    },
+    VITAbase: {
+      symbol: "VITA",
+      tokenId: {
+        chain: "Base",
+        address: "0x490a4B510d0Ea9f835D2dF29Eb73b4FcA5071937",
+      },
+      icon: "https://etherscan.io/token/images/vitadao_32.png",
+      decimals: 18,
+    },
+    VITAbsc: {
+      symbol: "VITA",
+      tokenId: {
+        chain: "Bsc",
+        address: "0x527942bEa3283D767F2449e57209fff3fE131395",
+      },
+      icon: "https://etherscan.io/token/images/vitadao_32.png",
       decimals: 18,
     },
   },
