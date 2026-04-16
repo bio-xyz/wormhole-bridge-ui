@@ -1,4 +1,4 @@
-import { nttRoutes, type NttRoute } from "@wormhole-foundation/wormhole-connect/ntt";
+import { nttExecutorRoute } from "@wormhole-foundation/wormhole-connect/ntt";
 import type { config } from "@wormhole-foundation/wormhole-connect";
 
 export const wormholeConfig: config.WormholeConnectConfig = {
@@ -23,8 +23,9 @@ export const wormholeConfig: config.WormholeConnectConfig = {
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID,
   },
   routes: [
-    ...nttRoutes({
-      tokens: {
+    nttExecutorRoute({
+      ntt: {
+        tokens: {
         BIO_NTT: [
           {
             chain: "Ethereum",
@@ -167,6 +168,7 @@ export const wormholeConfig: config.WormholeConnectConfig = {
             ],
           }
         ],
+        },
       },
     }),
   ],
