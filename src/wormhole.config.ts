@@ -13,7 +13,7 @@ export const wormholeConfig: config.WormholeConnectConfig = {
   },
   network: "Mainnet",
   chains: ["Ethereum", "Solana", "Base", "Bsc"],
-  tokens: ["BIO", "GROW", "QBIO", "NEURON", "AUBRAI"],
+  tokens: ["BIO", "GROW", "QBIO", "NEURON", "AUBRAI", "VITARNA"],
   ui: {
     title: "",
     defaultInputs: {
@@ -168,6 +168,30 @@ export const wormholeConfig: config.WormholeConnectConfig = {
             ],
           }
         ],
+        VITARNA_NTT: [
+          {
+            chain: "Ethereum",
+            manager: "0xCfe438F50601D6f5a522AD9F60D3b95D3e5F1575",
+            token: "0x7b66E84Be78772a3afAF5ba8c1993a1B5D05F9C2",
+            transceiver: [
+              {
+                address: "0x8Fe2ffCceD6B0925f2D4d488ddD5c3E500836f89",
+                type: "wormhole",
+              },
+            ],
+          },
+          {
+            chain: "Base",
+            manager: "0x466349bD227496dF32a579D3ab2f2B4733079142",
+            token: "0x2b09Be2A00CFc7787d0E3ec332d514f9a43a6469",
+            transceiver: [
+              {
+                address: "0xb099b4E7A100C827e0805CE82D52EaF3E40a1a5e",
+                type: "wormhole",
+              },
+            ],
+          }
+        ],
         },
       },
     }),
@@ -279,6 +303,24 @@ export const wormholeConfig: config.WormholeConnectConfig = {
         address: "0x225E88fc248CE6608f56e7C56903Ce7Be7d22367",
       },
       icon: "https://docs.aubr.ai/~gitbook/image?url=https%3A%2F%2F1724008203-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FNCQ5aGXwXZkRrGHN7L6a%252Fsites%252Fsite_vLFiG%252Ficon%252FdMhAhI6BZ3kQapWUL8Y1%252Favatar-dex.png%3Falt%3Dmedia%26token%3D3eb2b51c-8f6f-4a1a-a1fa-2144900a9c6c&width=32&dpr=2&quality=100&sign=e49a1906&sv=2",
+      decimals: 18,
+    },
+    VITARNAeth: {
+      symbol: "VITARNA",
+      tokenId: {
+        chain: "Ethereum",
+        address: "0x7b66E84Be78772a3afAF5ba8c1993a1B5D05F9C2",
+      },
+      icon: "https://etherscan.io/token/images/vitarna_32.png",
+      decimals: 18,
+    },
+    VITARNAbase: {
+      symbol: "VITARNA",
+      tokenId: {
+        chain: "Base",
+        address: "0x2b09Be2A00CFc7787d0E3ec332d514f9a43a6469",
+      },
+      icon: "https://etherscan.io/token/images/vitarna_32.png",
       decimals: 18,
     },
   },
